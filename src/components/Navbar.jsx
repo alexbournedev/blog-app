@@ -1,5 +1,5 @@
 import SearchBar from "./SearchBar";
-import SubNav from "./SearchBar";
+
 
 const Navbar = () => {
   return (
