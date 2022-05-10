@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
 
 export default function SearchBar() {
   return (
-    <div className='searchBar'>
-      <input type="text"></input>
-      <button>Search</button>
-    </div>
-  )
+    <form action="get" className="searchBar">
+      <input type="text" className="textBox"></input>
+      <button type="submit" className="btn btn-success">
+        Search
+      </button>
+    </form>
+  );
 }
