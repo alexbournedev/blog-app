@@ -108,6 +108,7 @@ a {
   box-shadow: 5px 5px 5px #543936;
 }
 
-/* .card-title {
-  display: grid;
-} */
+.blurb {
+  margin: auto;
+  padding: auto;
+}

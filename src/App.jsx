@@ -19,28 +19,12 @@
 
 import "./App.css";
 import Card from "./components/Card";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <header className="nav-bar">
-        <a href="/" className="title">
-          Blog App
-        </a>
-        <div className="links">
-          <div className="nav-link">
-            <a href="/" className="nav-link1">
-              Home
-            </a>
-            <a href="/" className="nav-link2">
-              About
-            </a>
-          </div>
-        </div>
-        <div className="login">
-          <a href="/">Login</a>
-        </div>
-      </header>
+      <Navbar />
       <div className="container">
         <Card />
         <Card />
