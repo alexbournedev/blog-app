@@ -1,3 +1,6 @@
+import SearchBar from "./SearchBar";
+import SubNav from "./SearchBar";
+
 const Navbar = () => {
   return (
     <header className="nav-bar">
@@ -14,6 +17,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+        <SearchBar />
       <div className="login">
         <a href="/">Login</a>
       </div>

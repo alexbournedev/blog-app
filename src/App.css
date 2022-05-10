@@ -1,3 +1,7 @@
+.App{
+  min-width: 100%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -13,7 +17,7 @@ a {
 
 .nav-bar {
   display: grid;
-  grid-template-columns: [col1-start] 25% [col2-start] 25% [col3-end] 5%;
+  grid-template-columns: [col1-start] 25% [col2-start] 25% [col3-end] 10% [col3-end] 5%;
   justify-content: space-around;
   background-color: #543936;
   opacity: 0.9;
@@ -80,6 +84,13 @@ a {
   transform: translateY(-10px);
 }
 
+.searchBar {
+  display: grid;
+  height: 7rem;
+  place-content: center;
+  justify-items:end
+}
+
 .container {
   display: grid;
   grid-template-columns: [col1] 33% [col2] 33% [col3] 33%;
@@ -87,28 +98,40 @@ a {
   grid-auto-flow: row;
   grid-gap: 5rem 3rem;
   margin-top: 7rem;
+  padding: 5rem;
   align-content: space-around;
-  padding-left: 10rem;
   place-content: center;
-  width: 100vw;
-}
 
+}
 .card {
   display: grid;
-  border: 1px solid lightslategray;
+  border: 0px solid lightslategray;
   border-radius: 10px;
   margin-top: 2rem;
   margin: 5px;
-  width: 17rem;
   height: 20rem;
   justify-items: center;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  transition: transform 250ms;
+  
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transform: translateY(-10px);
+  cursor: pointer;
 }
 
-.card:hover {
-  box-shadow: 5px 5px 5px #543936;
-}
 
 .blurb {
   margin: auto;
-  padding: auto;
+  padding: 1.2rem;
 }
+
+.footer {
+  display: grid;
+  color: white;
+  align-items: center;
+  white-space: nowrap;
+
+}
+

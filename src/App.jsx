@@ -19,7 +19,9 @@
 
 import "./App.css";
 import Card from "./components/Card";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import SubNav from "./components/SearchBar";
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
         <Card />
         <Card />
       </div>
+      <Footer />
     </div>
   );
 }
