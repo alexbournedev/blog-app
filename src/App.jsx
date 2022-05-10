@@ -24,15 +24,21 @@ function App() {
   return (
     <div className="App">
       <header className="nav-bar">
-        <a className="title">Blog App</a>
+        <a href="/" className="title">
+          Blog App
+        </a>
         <div className="links">
           <div className="nav-link">
-            <a className="nav-link1">Home</a>
-            <a className="nav-link2">About</a>
+            <a href="/" className="nav-link1">
+              Home
+            </a>
+            <a href="/" className="nav-link2">
+              About
+            </a>
           </div>
         </div>
         <div className="login">
-          <a>Login</a>
+          <a href="/">Login</a>
         </div>
       </header>
       <div className="container">
