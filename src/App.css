@@ -1,6 +1,4 @@
-.App {
-  min-width: 100%;
-}
+
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -15,161 +13,18 @@ a {
   color: #f7f6eb;
 }
 
-.nav-bar {
-  display: grid;
-  grid-template-columns: [col1-start] 25% [col2-start] 25% [col3-end] 30% [col4-end] 5%;
-  justify-content: space-around;
-  background-color: #543936;
-  opacity: 0.9;
-  height: 7rem;
-  margin: 0;
-  padding: 0;
-  width: 100;
-  white-space: nowrap;
-  align-content: start;
-}
 
-.searchBar {
-  margin-top: 1.7rem;
-}
 
-.title {
-  font-size: 3rem;
-  color: #f7f6eb;
-  display: grid;
-  justify-items: start;
-  padding: 10px;
-  justify-content: center;
-  align-content: center;
-  white-space: nowrap;
-  transition: color 1s ease-out 100ms;
-  transition: transform 250ms;
-}
 
-.title:hover {
-  cursor: pointer;
-  color: white;
-  transform: translateY(-10px);
-}
-
-.links {
-  color: #f7f6eb;
-  display: grid;
-  align-content: center;
-  justify-content: end;
-}
-
-.nav-link1:hover {
-  cursor: pointer;
-  color: white;
-  font-size: large;
-}
-.nav-link2:hover {
-  cursor: pointer;
-  color: white;
-  font-size: large;
-}
-
-.nav-link2 {
-  padding: 20px;
-}
-
-.login {
-  display: grid;
-  color: #f7f6eb;
-  align-content: center;
-  justify-content: center;
-  transition: color 2s ease-out 100ms;
-  transition: transform 250ms;
-}
-
-.login:hover {
-  color: white;
-  cursor: pointer;
-  font-size: x-large;
-  transform: translateY(-10px);
-}
-
-.container {
-  display: grid;
-  grid-template-columns: [col1] 33% [col2] 33% [col3] 33%;
-  grid-template-rows: [row1] 33% [row2] 33% [row3] 33%;
-  grid-auto-flow: row;
-  grid-gap: 5rem 3rem;
-  margin-top: 7rem;
-  padding: 5rem;
-  align-content: space-around;
-  place-content: center;
-}
-.card {
-  display: grid;
-  border: 0px solid lightslategray;
-  border-radius: 10px;
-  margin-top: 2rem;
-  margin: 5px;
-  height: 20rem;
-  justify-items: center;
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-  transition: transform 250ms;
-}
-.card:hover {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  transform: translateY(-10px);
-  cursor: pointer;
-}
-
-.blurb {
-  margin: auto;
-  padding: 1.2rem;
-}
-
-.footer-container {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  place-content: center;
-}
-
-/* .footer-content {
-  display: grid;
-  color: white;
-  align-items: center;
-  white-space: nowrap;
-} */
-
-.footer-content {
-  display: grid;
-  grid-template-columns: [col1-start] 25% [col2-start] 25% [col3-end] 30% [col4-end] 5%;
-  justify-content: space-around;
-  background-color: #543936;
-  opacity: 0.9;
-  height: 7rem;
-  margin: 0;
-  padding: 0;
-  width: 100;
-  white-space: nowrap;
-  align-content: center;
-  color: white;
-}
-
-.login-title {
-  display: grid;
-  font-size: 4rem;
-  color: #543936;
-  margin: 1rem;
-}
 
 .form-container {
   display: grid;
   border: 0px solid lightslategray;
   border-radius: 10px;
-  margin-top: 2rem;
-  margin: auto;
-  height: 20rem;
+  margin: 1rem auto auto auto;
+  height: 25rem;
   width: fit-content;
-  justify-items: center;
+  place-items: center;
   place-content: center;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -181,3 +36,5 @@ a {
   justify-content: center;
   font-size: xx-large;
 }
+
+

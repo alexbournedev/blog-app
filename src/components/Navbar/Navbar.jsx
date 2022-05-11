@@ -1,5 +1,5 @@
-import SearchBar from "./SearchBar";
-
+import SearchBar from "../SearchBar/SearchBar";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-        <SearchBar />
+      <SearchBar />
       <div className="login">
         <a href="/">Login</a>
       </div>

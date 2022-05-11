@@ -1,11 +1,13 @@
 import React from "react";
+import "../Footer/Footer.css";
+import "../Navbar/Navbar.css";
 
 export default function Footer() {
   return (
     <div className="footer-container">
-      <footer className="nav-bar">
+      <footer className="footer-bar">
         <div className="footer-content">
-          <div>&copy; 2022 Alex and Will, INC. All rights reserved</div>
+          <div>&copy; 2022 Alex and Will (ft. Mason), INC. All rights reserved</div>
         </div>
         <div className="links">
           <div className="nav-link">
