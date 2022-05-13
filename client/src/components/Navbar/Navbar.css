@@ -1,6 +1,6 @@
 .nav-bar {
     display: grid;
-    grid-template-columns: [col1-start] 45% [col2-start] 8% [col3-end] 15% [col4-end] 5%;
+    grid-template-columns: [col1-start] 30% [col2-start] 8% [col3-end] 15% [col4-end] 5%;
     justify-content: space-around;
     background-color: #543936;
     opacity: ;

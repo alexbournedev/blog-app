@@ -9,6 +9,9 @@ const Card = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
           commodi.
         </p>
+        <button className="card-button" type="submit">
+              Read more...
+            </button>
       </div>
     </div>
   );

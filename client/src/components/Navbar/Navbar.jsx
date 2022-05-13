@@ -15,6 +15,9 @@ const Navbar = () => {
           <a href="/about" className="nav-link2">
             About
           </a>
+          <a href="/CreatePost" className="nav-link2">
+            Create Post
+          </a>
         </div>
       </div>
       <SearchBar />

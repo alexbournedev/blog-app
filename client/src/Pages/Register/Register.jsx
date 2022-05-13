@@ -4,7 +4,7 @@ import "./Register.css";
 export default function Register() {
   return (
     <div className="form-container">
-      <span className="login-title">Sign Up</span>
+      <div className="register-title">Sign Up</div>
       <div className="form">
         <form>
           <div className="form-group">
@@ -36,10 +36,12 @@ export default function Register() {
               placeholder="verify password"
               required
             />
-
-            <a href="/register" className="form-control btn btn-primary" type="submit">
-              Register
-            </a>
+            <div className="reg-button">
+              <a href="/newUser" className="form-control btn btn-primary" type="submit">
+                Register
+              </a>
+            </div>
+            
           </div>
         </form>
       </div>

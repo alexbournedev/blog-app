@@ -2,13 +2,13 @@ import "./Login.css";
 
 function Login() {
   return (
-    <div className="form-container">
+    <div className="login-container">
       <div className="login-title">Log In</div>
       <div className="form">
         <form>
           <div className="from-group">
             <input
-              className="form-control"
+              className="form-control login-field"
               type="text"
               name="name"
               placeholder="username"
@@ -22,10 +22,13 @@ function Login() {
               required
             />
             <br />
-            <button id="reg" type="submit" className="btn btn-primary">
-              Log In
-            </button>
-            <button className="btn btn-secondary">Register</button>
+            <div className="login-button">
+              <button id="reg" type="submit" className="btn btn-success">Log In</button>
+            </div>
+            <div className="register-button">
+              <a href="/register" className="btn btn-secondary register-button">Register</a>
+            </div>
+            
           </div>
         </form>
       </div>

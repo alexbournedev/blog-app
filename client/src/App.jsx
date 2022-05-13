@@ -7,7 +7,7 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
-
+import CreatePost from "./Pages/CreatePost/CreatePost";
 
 
 
@@ -25,6 +25,7 @@ function App() {
           <Route path="/about"  exact element={<About />}/>
           <Route path="/login" exact element={<Login />}/>
           <Route path="/register" exact element={<Register />}/>
+          <Route path="/createPost" exact element ={<CreatePost />}/>
         </Routes>
         <div>
           <Footer />

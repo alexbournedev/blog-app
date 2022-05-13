@@ -24,3 +24,13 @@
     margin: auto;
     padding: 1.2rem;
   }
+
+  .card-button {
+    display: grid;
+    direction: rtl;
+    border-radius: 10px;
+    height: 1.5rem;
+    border: 0;
+    background-color: white;
+    font-size: small;
+  }
