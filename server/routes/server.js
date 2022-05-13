@@ -1,4 +1,6 @@
 const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 
 // const db = require('./Config/db')
 
@@ -21,16 +23,22 @@ db.connect(function(err){
     console.log("Connected")
 })
 
+router.use(bodyParser.urlencoded({extended: true}))
+router.use(express.json())
+router.use(cors());
 
-router.get('/', (req, res) => {
-    db.query(
-        "INSERT INTO blogPosts (title, postText, userName) VALUES ('How To Add To A Database', 'There are a lot of steps to a database but I will not be able to go through all of them right now', 'wreed3rd')", 
-        (err, result) => {
-            console.log("error", err);
-            console.log("result", result);
-            res.json(err || result);
-        }
-    );
+
+
+router.post('/CreatePost', (req, res) => {
+    const title = req.body.title;
+    const postText = req.body.postText;
+    const userName = 'default User';
+
+    const sqlInsert = "INSERT INTO blogPosts (title, postText, userName) VALUES (?,?,?)"
+    db.query(sqlInsert, [title, postText, userName], (err, result) =>{
+        
+        res.send(result)
+    });
 });
 
 router.listen(port, ()=>{

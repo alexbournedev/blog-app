@@ -1,15 +1,14 @@
 .nav-bar {
-    display: grid;
-    grid-template-columns: [col1-start] 30% [col2-start] 8% [col3-end] 15% [col4-end] 5%;
-    justify-content: space-around;
+    display: flex;
+    /* grid-template-columns: [col1-start] 30% [col2-start] 8% [col3-end] 15% [col4-end] 5%; */
+    justify-content: space-evenly;
     background-color: #543936;
-    opacity: ;
     height: 7rem;
     margin: 0;
     padding: 0;
     width: 100%;
     white-space: nowrap;
-    align-content: start;
+    align-content: flex-start;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -39,6 +38,7 @@
     display: grid;
     align-content: center;
     justify-content: center;
+    white-space: nowrap;
     
   }
 
