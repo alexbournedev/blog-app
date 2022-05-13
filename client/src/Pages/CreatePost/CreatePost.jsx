@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import "./CreatePost.css"
 
 export default function CreatePost() {
@@ -6,22 +6,7 @@ export default function CreatePost() {
   const [title, setTitle] = useState('');
   const [textBox, setTextBox] = useState('');
   const [userName, setUserName] = useState('');
-  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    readPost();
-  }, [])
-
-  const readPost = async () => {
-    try{
-      const response = await fetch('http://localhost:3003/Posts');
-      const json = await response.json();
-      setData(json);
-    }catch(e){
-      console.log(e);
-    }
-  
-  }
 
   const submitPost = async (e) => {
     e.preventDefault();
@@ -86,9 +71,6 @@ export default function CreatePost() {
             
           </div>
         </form>
-        {/* {data.map((post) => {
-          return <h1> Post: {post.title}</h1>
-        }) } */}
       </div>
     </div>
   )
