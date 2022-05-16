@@ -31,6 +31,13 @@
     border-radius: 10px;
     height: 1.5rem;
     border: 0;
-    background-color: white;
+    color: black;
     font-size: small;
+  }
+
+  .card-button:hover {
+    color: #543936;
+    font-size: medium;
+    cursor: pointer;
+    
   }

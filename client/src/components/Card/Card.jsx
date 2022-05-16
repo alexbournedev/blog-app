@@ -26,14 +26,12 @@ const Card = () => {
           <div className="card">
             <h2 className="card-title"> {post.title} </h2>
             <p className="blurb"> {post.postText} </p>
-            <button className="card-button" type="submit">Read more...</button>
+            <a href="./FullPost" className="card-button" type="submit">Read more...</a>
           </div>
         </div>
       );
     })}
     </div>
-
-
   );
 };
 

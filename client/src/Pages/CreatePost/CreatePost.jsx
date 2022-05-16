@@ -27,8 +27,8 @@ export default function CreatePost() {
 
   return (
     <div className="create-post-container">
-      <span className="post-title">Create Post
-      <div className='post-username'>
+      <span className="createPost-title">Create Post</span>
+      <span className='createPost-username'>
         <input
                 className="form-control "
                 type="text"
@@ -38,14 +38,12 @@ export default function CreatePost() {
                 placeholder="username"
                 required
                 />
-      </div>
-
       </span>
       <div className="form">
         <form onSubmit={submitPost}>
           <div className="form-group">
-            <input
-              className="form-control post-title-title"
+            <textarea
+              className="form-control createPost-title-title"
               type="text"
               name="title"onChange={(e)=>{
                 setTitle(e.target.value);
@@ -53,16 +51,16 @@ export default function CreatePost() {
               placeholder="title"
               required
             />
-            
-            <input
-              className="form-control post-text"
-              type="textbox"
-              name="text" onChange={(e)=>{
-                setTextBox(e.target.value);
-              }}
-              placeholder="Text"
-              required
-            />
+           
+              <textarea
+                className="form-control createPost-text"
+                name="text" onChange={(e)=>{
+                  setTextBox(e.target.value);
+                }}
+                placeholder="Text"
+                required
+              />
+
             <div className='submit-button'>
             <button className="form-control btn btn-primary " type="submit">
               Submit

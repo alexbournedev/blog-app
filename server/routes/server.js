@@ -27,12 +27,9 @@ router.use(bodyParser.urlencoded({extended: true}))
 router.use(express.json())
 router.use(cors());
 
-router.get('/Posts', (req,res) =>{
-
+router.get('/Posts', (req,res) => {
     const sqlSelectAll = "SELECT * FROM blogPosts"
-
     db.query(sqlSelectAll, (err,result) => {
-
         res.json(result);
     });
 })

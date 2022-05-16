@@ -8,6 +8,8 @@ import About from "./Pages/About/About";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import CreatePost from "./Pages/CreatePost/CreatePost";
+import FullPost from "./Pages/FullPost/FullPost";
+import UpdatePost from "./Pages/UpdatePost/UpdatePost";
 
 
 
@@ -22,10 +24,12 @@ function App() {
         {/* <Register /> */}
         <Routes>
           <Route path="/" exact element={<Home />}/>
-          <Route path="/about"  exact element={<About />}/>
+          {/* <Route path="/about"  exact element={<About />}/> */}
           <Route path="/login" exact element={<Login />}/>
           <Route path="/register" exact element={<Register />}/>
-          <Route path="/createPost" exact element ={<CreatePost />}/>
+          <Route path="/CreatePost" exact element ={<CreatePost />}/>
+          <Route path="/FullPost" exact element ={<FullPost />}/>
+          <Route path="/UpdatePost" exact element ={<UpdatePost />}/>
         </Routes>
         <div>
           <Footer />

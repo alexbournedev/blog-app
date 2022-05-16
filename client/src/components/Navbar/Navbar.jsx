@@ -12,9 +12,9 @@ const Navbar = () => {
           <a href="/" className="nav-link1">
             Home
           </a>
-          <a href="/about" className="nav-link2">
+          {/* <a href="/about" className="nav-link2">
             About
-          </a>
+          </a> */}
           <a href="/CreatePost" className="nav-link2">
             Create Post
           </a>
