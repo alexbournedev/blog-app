@@ -1,3 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: [col1] 40% [col2] 40% [col3] 40%;
+  grid-auto-flow: row;
+  grid-gap: 5rem 3rem;
+  margin-top: 1rem;
+  padding: 5rem;
+  place-items: center;
+  place-content: center;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.card-container {
+  display: grid;
+  max-width: 40rem;
+  place-content: center;
+  place-items: center;
+  box-sizing: border-box;
+
+}
+
 .card {
     display: grid;
     border: 0px solid lightslategray;
@@ -5,6 +27,7 @@
     margin-top: 2rem;
     margin: 5px;
     height: 20rem;
+    min-width: auto;
     justify-items: center;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
     transition: transform 250ms;

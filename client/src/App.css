@@ -14,11 +14,6 @@ a {
 }
 
 
-
-
-
-
-
 .form {
   display: grid;
   grid-template-columns: [col1] 100%;

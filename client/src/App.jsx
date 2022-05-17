@@ -4,7 +4,7 @@ import "./App.css";
 import Footer from "./components/Footer/Footer"
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
+// import About from "./Pages/About/About";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import CreatePost from "./Pages/CreatePost/CreatePost";
@@ -28,7 +28,7 @@ function App() {
           <Route path="/login" exact element={<Login />}/>
           <Route path="/register" exact element={<Register />}/>
           <Route path="/CreatePost" exact element ={<CreatePost />}/>
-          <Route path="/FullPost" exact element ={<FullPost />}/>
+          <Route path="/Posts/:id" exact element ={<FullPost />}/>
           <Route path="/UpdatePost" exact element ={<UpdatePost />}/>
         </Routes>
         <div>

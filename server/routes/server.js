@@ -34,6 +34,15 @@ router.get('/Posts', (req,res) => {
     });
 })
 
+router.get('/Posts/:id', (req,res) => {
+    const id = req.params.id;
+    console.log(id)
+    const sqlSelectAll = "SELECT * FROM blogPosts WHERE id = ?"
+    db.query(sqlSelectAll, [id], (err,result) => {
+        res.json(result[0]);
+    });
+})
+
 
 router.post('/Post', (req, res) => {
     const title = req.body.title;
@@ -42,7 +51,9 @@ router.post('/Post', (req, res) => {
 
     const sqlInsert = "INSERT INTO blogPosts (title, postText, userName) VALUES (?,?,?)"
     db.query(sqlInsert, [title, postText, userName], (err, result) =>{
-        
+        if(err){
+            console.log(err);
+        }
         res.send(result)
     });
 });

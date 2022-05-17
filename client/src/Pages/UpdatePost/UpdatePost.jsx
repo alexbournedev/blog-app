@@ -6,7 +6,7 @@ export default function UpdatePost() {
     const [textBox, setTextBox] = useState('');
     const [userName, setUserName] = useState('');
   
-  
+    //sending information to database
     const submitPost = async (e) => {
       e.preventDefault();
       try{
@@ -20,6 +20,12 @@ export default function UpdatePost() {
       }
       
       }
+
+      //test to see if inputs are logging to the browser
+    // useEffect(() => { 
+    //     console.log(userName + title + textBox)
+    // }, [userName, title, textBox]);
+
   return (
     <div className="update-post-container">
     <span className="update-title">Update Post</span>

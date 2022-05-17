@@ -63,16 +63,15 @@
     padding: 20px;
   }
 
-  .login {
+  .login-nav {
     display: grid;
     color: #f7f6eb;
-    align-content: center;
-    justify-content: center;
+    place-content: center;
     transition: color 2s ease-out 100ms;
     transition: transform 250ms;
   }
   
-  .login:hover {
+  .login-nav:hover {
     color: white;
     cursor: pointer;
     font-size: x-large;

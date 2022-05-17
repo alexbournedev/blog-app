@@ -37,7 +37,7 @@ export default function Register() {
               required
             />
             <div className="reg-button">
-              <a href="/newUser" className="form-control btn btn-primary" type="submit">
+              <a href="/newUser" className="form-control btn btn-success" type="submit">
                 Register
               </a>
             </div>

@@ -1,8 +1,10 @@
 import React, {useState, useEffect } from "react";
 import "./Card.css";
+import { useNavigate } from 'react-router-dom';
 
 const Card = () => {
   const [cardData, setCardData] = useState([]);
+  const nav = useNavigate();
 
   useEffect(() => {
     readPost();
@@ -26,7 +28,7 @@ const Card = () => {
           <div className="card">
             <h2 className="card-title"> {post.title} </h2>
             <p className="blurb"> {post.postText} </p>
-            <a href="./FullPost" className="card-button" type="submit">Read more...</a>
+            <button onClick={() => nav(`/Posts/${post.id}`)} className="card-button" type="submit">Read more...</button>
           </div>
         </div>
       );

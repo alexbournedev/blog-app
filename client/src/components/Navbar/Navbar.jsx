@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
       </div>
       <SearchBar />
-      <div className="login">
+      <div className="login-nav">
         <a href="/login">Login</a>
       </div>
     </header>
