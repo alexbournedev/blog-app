@@ -1,13 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import './FullPost.css'
-import { useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate} from 'react-router-dom';
+
+
+
 
 
 export default function FullPost() {
     const [fullPost, setFullPost] = useState([]);
   const {id} = useParams();
   const nav = useNavigate();
+
+
 
     useEffect(() => {
       readPost(id);
@@ -18,11 +22,23 @@ export default function FullPost() {
         const response = await fetch(`http://localhost:3003/Posts/${id}`);
         const json = await response.json();
         setFullPost(json);
-        nav()
       }catch(e){
         console.log(e);
       }
     }
+
+    const deletePost = async (id) => {
+      try{
+        const response = await fetch(`http://localhost:3003/Posts/${id}`,{method: 'DELETE'})
+        const json = await response.json();
+        console.log(json);
+        nav('/')
+      }catch(e){
+        console.log(e)
+      }
+    
+  }
+
   return (
     
       <div className="post-container">
@@ -37,9 +53,9 @@ export default function FullPost() {
                   <p className="fullPost-text">{fullPost.postText}</p>
               </div>  
           <div className='fullPost-buttons'>
-            <button className="btn btn-secondary delete" type="submit">Delete</button>
+            <button onClick={()=>{deletePost(id)}}  className="btn btn-secondary delete" >Delete</button>
         
-            <button className="btn btn-success" type="submit">Update</button>
+            <Link to= {`/UpdatePost/${id}`}  className="btn btn-success" >Update</Link>
           </div>
           
         

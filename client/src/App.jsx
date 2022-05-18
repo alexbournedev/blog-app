@@ -29,7 +29,7 @@ function App() {
           <Route path="/register" exact element={<Register />}/>
           <Route path="/CreatePost" exact element ={<CreatePost />}/>
           <Route path="/Posts/:id" exact element ={<FullPost />}/>
-          <Route path="/UpdatePost" exact element ={<UpdatePost />}/>
+          <Route path="/UpdatePost/:id" exact element ={<UpdatePost />}/>
         </Routes>
         <div>
           <Footer />

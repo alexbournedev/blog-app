@@ -1,28 +1,29 @@
 import SearchBar from "../SearchBar/SearchBar";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <header className="nav-bar">
-      <a href="/" className="title">
+      <NavLink className="title" to='/' exact>
         Blog App
-      </a>
+      </NavLink>
       <div className="links">
         <div className="nav-link">
-          <a href="/" className="nav-link1">
+          <NavLink className="nav-link1" to='/' exact>
             Home
-          </a>
+          </NavLink>
           {/* <a href="/about" className="nav-link2">
             About
           </a> */}
-          <a href="/CreatePost" className="nav-link2">
+          <NavLink to="/CreatePost" exact className="nav-link2">
             Create Post
-          </a>
+          </NavLink>
         </div>
       </div>
       <SearchBar />
       <div className="login-nav">
-        <a href="/login">Login</a>
+        <NavLink to="/login" exact>Login</NavLink>
       </div>
     </header>
   );

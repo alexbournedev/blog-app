@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./routes/server.js",
+    "test": "NODE_ENV=TEST jest -i --watch",
     "devStart": "nodemon ./routes/server.js"
   },
   "dependencies": {
@@ -17,6 +18,8 @@
     "mysql": "^2.18.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.3"
   }
 }

@@ -36,12 +36,39 @@ router.get('/Posts', (req,res) => {
 
 router.get('/Posts/:id', (req,res) => {
     const id = req.params.id;
-    console.log(id)
     const sqlSelectAll = "SELECT * FROM blogPosts WHERE id = ?"
     db.query(sqlSelectAll, [id], (err,result) => {
         res.json(result[0]);
     });
 })
+
+router.put('/Posts/:id', (req,res) => {
+    const id = req.params.id;
+    const title = req.body.title;
+    const postText = req.body.postText;
+    const userName = 'default User';
+    console.log(id)
+    const sqlUpdate = "UPDATE blogPosts SET title = ?, postText = ?, userName= ? where id = ?"
+    db.query(sqlUpdate, [title, postText, userName, id], (err, result) => {
+        if(err){
+            console.log(err)
+        }
+        res.json(result)
+    })
+})
+
+router.delete('/Posts/:id', (req, res) =>{
+    const id = req.params.id;
+    const sqlDelete = "DELETE FROM blogPosts WHERE id = ?";
+    db.query(sqlDelete, [id], (err, result) => {
+        if(err){
+            console.log(err);
+        }
+        res.json(result);
+    })
+})
+
+
 
 
 router.post('/Post', (req, res) => {
@@ -58,8 +85,10 @@ router.post('/Post', (req, res) => {
     });
 });
 
-router.listen(port, ()=>{
-    console.log(`Listening on port ${port}`);
-})
+if (process.env.NODE_ENV !== 'TEST') {
+    router.listen(port, ()=>{
+        console.log(`Listening on port ${port}`);
+    });
+}
 
 module.exports = router;

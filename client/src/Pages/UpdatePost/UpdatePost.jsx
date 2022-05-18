@@ -1,20 +1,43 @@
 import React, { useState} from 'react'
 import './UpdatePost.css'
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
 
 export default function UpdatePost() {
     const [title, setTitle] = useState('');
     const [textBox, setTextBox] = useState('');
     const [userName, setUserName] = useState('');
+    const nav =useNavigate();
+    const {id} = useParams();
+   
+  // concept starter code to be able to add the current post in the update post fields to be edited
+    // const [update, setUpdate] = useState({id: {id}, title: title, postText: textBox, userName: userName})
+
+    // useEffect(() => {
+    //   readPost(id);
+    // }, [id])
   
-    //sending information to database
+    // const readPost = async (id) => {
+    //   try{
+    //     const response = await fetch(`http://localhost:3003/Posts/${id}`);
+    //     const json = await response.json();
+    //     setFullPost(json);
+    //   }catch(e){
+    //     console.log(e);
+    //   }
+    // }
+
+  //sending information to database
     const submitPost = async (e) => {
       e.preventDefault();
       try{
-        const response = await fetch('http://localhost:3003/Post', {
+        const response = await fetch(`http://localhost:3003/Posts/${id}`, {
           method: 'PUT', headers: {"content-Type": 'application/json'}, body: JSON.stringify({title: title, postText: textBox, userName: userName})
         });
         const json = await response.json();
         console.log(json);
+        nav(`/Posts/${id}`)
       }catch(e){
         console.log(e);
       }
@@ -36,8 +59,8 @@ export default function UpdatePost() {
               name="name" onChange={(e)=>{
                 setUserName(e.target.value);
               }}
-              placeholder="username"
-              required
+              placeholder="user name"
+  
               />
     </div>
 
@@ -51,8 +74,8 @@ export default function UpdatePost() {
             name="title"onChange={(e)=>{
               setTitle(e.target.value);
             }}
-            placeholder="title"
-            required
+            placeholder="Title"
+          
           />
           
           <textarea
@@ -62,7 +85,6 @@ export default function UpdatePost() {
               setTextBox(e.target.value);
             }}
             placeholder="Text"
-            required
           />
           <div className='submit-button'>
           <button className="form-control btn btn-primary " type="submit">

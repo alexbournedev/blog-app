@@ -27,8 +27,12 @@ const Card = () => {
         <div className="card-container">
           <div className="card">
             <h2 className="card-title"> {post.title} </h2>
-            <p className="blurb"> {post.postText} </p>
+            
+            <p className="blurb" > {post.postText} </p>
+          
+            <div  >
             <button onClick={() => nav(`/Posts/${post.id}`)} className="card-button" type="submit">Read more...</button>
+            </div>
           </div>
         </div>
       );
