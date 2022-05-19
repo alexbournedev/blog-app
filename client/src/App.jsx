@@ -5,11 +5,11 @@ import Footer from "./components/Footer/Footer"
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 // import About from "./Pages/About/About";
-import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import CreatePost from "./Pages/CreatePost/CreatePost";
 import FullPost from "./Pages/FullPost/FullPost";
 import UpdatePost from "./Pages/UpdatePost/UpdatePost";
+// import LoginButton from "./LoginButton";
 
 
 
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />}/>
           {/* <Route path="/about"  exact element={<About />}/> */}
-          <Route path="/login" exact element={<Login />}/>
+          {/* <Route path="/login" exact element={<LoginButton />}/> */}
           <Route path="/register" exact element={<Register />}/>
           <Route path="/CreatePost" exact element ={<CreatePost />}/>
           <Route path="/Posts/:id" exact element ={<FullPost />}/>

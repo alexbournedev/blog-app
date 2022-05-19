@@ -26,9 +26,11 @@ const Card = () => {
       return (
         <div className="card-container">
           <div className="card">
-            <h2 className="card-title"> {post.title} </h2>
-            
-            <p className="blurb" > {post.postText} </p>
+            <h2 className="card-title"> {post.title.length > 50 ? post.title.substring(0,50) + '...' : post.title} </h2>
+            <div className="blurb" >
+            <p > {post.postText.length > 200 ? post.postText.substring(0, 200) + '...' : post.postText} </p>
+
+            </div>
           
             <div  >
             <button onClick={() => nav(`/Posts/${post.id}`)} className="card-button" type="submit">Read more...</button>

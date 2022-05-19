@@ -1,8 +1,12 @@
 import SearchBar from "../SearchBar/SearchBar";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 const Navbar = () => {
+  const { loginWithRedirect } = useAuth0();
+
   return (
     <header className="nav-bar">
       <NavLink className="title" to='/' exact>
@@ -23,7 +27,7 @@ const Navbar = () => {
       </div>
       <SearchBar />
       <div className="login-nav">
-        <NavLink to="/login" exact>Login</NavLink>
+      <button onClick={() => loginWithRedirect()}>Log In</button>
       </div>
     </header>
   );
