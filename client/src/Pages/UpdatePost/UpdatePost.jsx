@@ -1,7 +1,9 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import './UpdatePost.css'
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+
+
 
 
 export default function UpdatePost() {
@@ -10,23 +12,22 @@ export default function UpdatePost() {
     const [userName, setUserName] = useState('');
     const nav =useNavigate();
     const {id} = useParams();
-   
-  // concept starter code to be able to add the current post in the update post fields to be edited
-    // const [update, setUpdate] = useState({id: {id}, title: title, postText: textBox, userName: userName})
 
-    // useEffect(() => {
-    //   readPost(id);
-    // }, [id])
   
-    // const readPost = async (id) => {
-    //   try{
-    //     const response = await fetch(`http://localhost:3003/Posts/${id}`);
-    //     const json = await response.json();
-    //     setFullPost(json);
-    //   }catch(e){
-    //     console.log(e);
-    //   }
-    // }
+    useEffect(() => {
+      readPost(id);
+    }, [id])
+  
+    const readPost = async (id) => {
+      try{
+        const response = await fetch(`http://localhost:3003/Posts/${id}`);
+        const json = await response.json();
+        setTitle(json.title)
+        setTextBox(json.postText)
+      }catch(e){
+        console.log(e);
+      }
+    }
 
   //sending information to database
     const submitPost = async (e) => {
@@ -71,6 +72,7 @@ export default function UpdatePost() {
           <textarea
             className="form-control update-title-title"
             type="text"
+            value= {title}
             name="title"onChange={(e)=>{
               setTitle(e.target.value);
             }}
@@ -81,6 +83,7 @@ export default function UpdatePost() {
           <textarea
             className="form-control update-text"
             type="textbox"
+            value={textBox}
             name="text" onChange={(e)=>{
               setTextBox(e.target.value);
             }}

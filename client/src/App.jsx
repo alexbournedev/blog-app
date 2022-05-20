@@ -19,13 +19,8 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        {/* <Login /> */}
-        {/* <Home /> */}
-        {/* <Register /> */}
         <Routes>
           <Route path="/" exact element={<Home />}/>
-          {/* <Route path="/about"  exact element={<About />}/> */}
-          {/* <Route path="/login" exact element={<LoginButton />}/> */}
           <Route path="/register" exact element={<Register />}/>
           <Route path="/CreatePost" exact element ={<CreatePost />}/>
           <Route path="/Posts/:id" exact element ={<FullPost />}/>
