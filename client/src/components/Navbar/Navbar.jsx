@@ -1,11 +1,11 @@
 import SearchBar from "../SearchBar/SearchBar";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "../LoginButton";
+import LogoutButton from "../LogoutButton";
 
 
 const Navbar = () => {
-  const { loginWithRedirect } = useAuth0();
 
   return (
     <header className="nav-bar">
@@ -27,7 +27,8 @@ const Navbar = () => {
       </div>
       <SearchBar />
       <div className="login-nav">
-      <button onClick={() => loginWithRedirect()}>Log In</button>
+      <LoginButton />
+      <LogoutButton />
       </div>
     </header>
   );

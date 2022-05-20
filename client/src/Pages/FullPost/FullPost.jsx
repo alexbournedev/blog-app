@@ -3,15 +3,10 @@ import './FullPost.css'
 import { useParams, Link, useNavigate} from 'react-router-dom';
 
 
-
-
-
 export default function FullPost() {
     const [fullPost, setFullPost] = useState([]);
   const {id} = useParams();
   const nav = useNavigate();
-
-
 
     useEffect(() => {
       readPost(id);

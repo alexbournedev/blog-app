@@ -24,11 +24,11 @@ const Card = () => {
     <div className="container">
       {cardData.map((post) => {
       return (
-        <div className="card-container">
+        <div key={post.id} className="card-container">
           <div className="card">
             <h2 className="card-title"> {post.title.length > 50 ? post.title.substring(0,50) + '...' : post.title} </h2>
             <div className="blurb" >
-            <p > {post.postText.length > 200 ? post.postText.substring(0, 200) + '...' : post.postText} </p>
+            <p key={post.id}> {post.postText.length > 200 ? post.postText.substring(0, 200) + '...' : post.postText} </p>
 
             </div>
           

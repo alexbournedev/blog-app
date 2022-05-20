@@ -8,7 +8,8 @@ const router = express();
 
 const port = 3003; 
 
-const mysql = require('mysql')
+const mysql = require('mysql');
+
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -34,6 +35,17 @@ router.get('/Posts', (req,res) => {
     });
 })
 
+// router.get('/Posts/:title', (req, res) => {
+//     const title = req.params.title
+//     const sqlSearch = `SELECT * FROM blogPosts WHERE title = ? `
+//     db.query(sqlSearch, title, (err, result) =>{
+//         if(err){
+//             console.log(err)
+//         }
+//         res.json(result)
+//     })
+// })
+
 router.get('/Posts/:id', (req,res) => {
     const id = req.params.id;
     const sqlSelectAll = "SELECT * FROM blogPosts WHERE id = ?"
@@ -46,7 +58,7 @@ router.put('/Posts/:id', (req,res) => {
     const id = req.params.id;
     const title = req.body.title;
     const postText = req.body.postText;
-    const userName = 'default User';
+    const userName = 'wreed3';
     console.log(id)
     const sqlUpdate = "UPDATE blogPosts SET title = ?, postText = ?, userName= ? where id = ?"
     db.query(sqlUpdate, [title, postText, userName, id], (err, result) => {
@@ -74,7 +86,7 @@ router.delete('/Posts/:id', (req, res) =>{
 router.post('/Post', (req, res) => {
     const title = req.body.title;
     const postText = req.body.postText;
-    const userName = 'default User';
+    const userName = 'wreed3';
 
     const sqlInsert = "INSERT INTO blogPosts (title, postText, userName) VALUES (?,?,?)"
     db.query(sqlInsert, [title, postText, userName], (err, result) =>{
